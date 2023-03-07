@@ -1,0 +1,114 @@
+// programmingChallengeRPG.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+#include <thread>
+#include <chrono>
+#include <string>
+using namespace std;
+string playerName = " ";
+int playerAge = 0;
+string armourType = " ";
+string playerProfession = " ";
+//bool invalidArmour = false;
+//bool invalidProf = false;
+
+
+
+int main()
+{
+    cout << "Welcome traveller. Before you start, we need some important details from you. First of all, what is the name you go by? \n";
+    cin >> playerName;
+    this_thread::sleep_for(chrono::seconds(1));
+    
+    cout << "Ah, " << playerName << ". Good choice. Now, how old will you be?\n" << endl;
+    cin >> playerAge;
+    //invalidArmour = false;
+
+    cout << "I see.Now comes for your most important choice.What armour will you choose ? Your options are : \n";
+    this_thread::sleep_for(chrono::milliseconds(50));
+    cout << "1 - Light: High movement speed. Low protection.\n";
+    this_thread::sleep_for(chrono::milliseconds(50));
+    cout << "2 - Medium: Average movement speed. Average protection.\n";
+    this_thread::sleep_for(chrono::milliseconds(50));
+    cout << "3 - Heavy: Low movement speed. High protection.\n";
+    this_thread::sleep_for(chrono::milliseconds(50));
+
+    cout << "Please choose your armour. Press 1 for Light, 2 for Medium and 3 for Heavy.\n";
+    cin >> armourType;
+    this_thread::sleep_for(chrono::seconds(1));
+
+    if (armourType == "1") {
+        cout << "Light armour. A good choice for the nimble player.";
+        //invalidArmour = false;
+    }
+
+    else if (armourType == "2") {
+        cout << "Medium armour. I see, you are the most flexible type of player.";
+        //invalidArmour = false;
+    }
+
+    else if (armourType == "3") {
+        cout << "Heavy armour.You are the pillar of your community.";
+        //invalidArmour = false;
+    }
+
+    else {
+        cout << "This is not a valid option. Please try again.";
+        //invalidArmour = true;
+    }
+
+
+
+
+        
+    
+    
+
+    this_thread::sleep_for(chrono::seconds(1));
+
+    
+    cout << "Congratulations, " << playerName << ". You are at the beginning of your long and illustrious journey at the age of " << playerAge << ". But wait, there's a problem. We don't know your profession!";
+    cout << "You need to choose a profession. Will you be \n";
+    this_thread::sleep_for(chrono::seconds(1));
+    cout << "1 - Farmer \n";
+    this_thread::sleep_for(chrono::milliseconds(50));
+    cout << "2 - Blacksmith \n";
+    this_thread::sleep_for(chrono::milliseconds(50));
+    cout << "3 - Warrior \n";
+    this_thread::sleep_for(chrono::milliseconds(50));
+
+    cout << "Please type 1, 2 or 3 for your profession choice. \n";
+    cin >> playerProfession;
+    this_thread::sleep_for(chrono::milliseconds(50));
+
+    if (playerProfession == "1") {
+        cout << playerName << ", the farmer shall set off on their quest to find shit and kick ass.";
+        //invalidProf = false;
+    }
+    else if (playerProfession == "2") {
+        cout << playerName << ", the blacksmith shall set off on their quest to find shit and kick ass.";
+        //invalidProf = false;
+    }
+    else if (playerProfession == "3") {
+        cout << playerName << ", the warrior shall set off on their quest to kick ass.";
+        //invalidProf = false;
+    }
+    else {
+        cout << "WRONG!!!!!";
+        //invalidProf = true;
+    }
+     //commented out all input validation it doesn't work i don't know why and i will kill myself if i have to do this any longer
+    
+    
+
+        
+    
+    
+    
+    
+    //this is the end of the code. see 428goose.wordpress.com for more.
+    
+}
+
+
